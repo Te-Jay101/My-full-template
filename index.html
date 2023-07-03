@@ -9,22 +9,34 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/style.css">
-<title>Title</title>
+<title>Tic Tac Toe!</title>
 </head>
 <body>
+    <!--Heading Section-->
     <h1 class="heading">
         <i class="fa-solid fa-xmark"></i>Games Room!<i class="fa-solid fa-o"></i>
     </h1>
-
-    <div class="play-zone">
-
-
+    <!--Play-Zone area-->
+    <div class="play-zone" id="play-zone">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
     </div>
-
+    <!--Score Zone-->
     <div class="score-zone">
             <p class="scores">Player 1:<span id="player1">0</span></p>
             <p class="scores">Player 2:<span id="player2">0</span></p>
-
+    </div>
+    <!--Winners Message-->
+    <div class="winning-message" id="winningMessage">
+        <div id="winningMessageText"></div>
+        <button id="restartButton">Go Again!</button>
     </div>
 
 <script src="assets/js/script.js"></script>

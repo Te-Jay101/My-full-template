@@ -1,9 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
 
 :root {
-    cell-size: 100px;
+    --cell-size: 100px;
 
-    color:aqua;
-    color-set: blue;
-    1: 10px;
+    --color: #81c3fd;
+    --color-set: #0275d8;
+    --1: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+/* Creating play area */
+.play-zone {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 2px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+/*Removes edges of table for game area*/
+
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+    border-right: none;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+    border-bottom: none;
+}
+
+.cell.x, .cell.circle {
+    cursor: not-allowed;
+}
+
+/* code for X (cross) */
+
+.play-zone.x .cell:not(.circle):not(.x):hover {
+    background: linear-gradient(to top right, transparent calc(50% - var(--1) /2), var(--color) calc(50% -var(--1) /2) calc(50% + var(--1) /2)),
+    linear-gradient(to bottom right, transparent calc(50% - var(--1) /2), var(--color) calc(50% - var(--1) /2) calc(50% - var(--1) /2), transparent calc(50% + var(--1) /2));
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
 }

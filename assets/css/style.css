@@ -85,3 +85,35 @@ body {
     background: radial-gradient(var(--color-set) 60%, transparent 60%);
 }
 
+/* Winning message styling */
+
+.winning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #81c3fd;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 5rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    flex-direction: column;
+}
+
+.winning-message button {
+    border-radius: 10px;
+    font-size: 3rem;
+    background-color: #81c3fd;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.winning-message button:hover {
+    background-color: black;
+    color: antiquewhite;
+    border-color: antiquewhite;
+}

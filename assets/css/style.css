@@ -9,7 +9,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow: scroll;
     margin: 0;
 }
  /* Header and footer */
@@ -138,6 +138,8 @@ footer {
 .winning-message.show {
     display: flex;
 }
+
+/* Score zone styling */
 
 .score-zone {
     position: relative;

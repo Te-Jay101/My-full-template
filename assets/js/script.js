@@ -19,3 +19,21 @@ const winningMesssageElement = document.getElementById('winningMessage')
 const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.getElementById('winningMessageText')
 let isPlayer_o_Turn = false
+
+// start game function //
+
+startGame()
+
+restartButton.addEventListener('click', startGame)
+
+function startGame() {
+    isPlayer_o_Turn = false
+    cellElements.forEach(cell => {
+        cell.classList.remove(player_x_class)
+        cell.classList.remove(player_o_class)
+        cell.removeEventListener('click', handleCellClick)
+        cell.addEventListener('click', handleCellClick, { once: true})
+    })
+    setplayzoneHoverClass()
+    winningMesssageElement.classList.remove('show')
+}

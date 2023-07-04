@@ -11,6 +11,11 @@
 body {
     margin: 0;
 }
+ /* Header and footer */
+.heading {
+    text-align: center;
+    height: 50px;
+}
 
 /* Creating play area */
 .play-zone {
@@ -116,4 +121,9 @@ body {
     background-color: black;
     color: antiquewhite;
     border-color: antiquewhite;
+}
+
+
+.winning-message.show {
+    display: flex;
 }
